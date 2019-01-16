@@ -1,0 +1,9 @@
+cmake-build-*/
+*.bc
+*.ll
+*.a
+.idea/
+CMakeCache.txt
+CMakeFiles/
+Makefile
+*.cmake

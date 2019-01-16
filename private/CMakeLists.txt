@@ -1,0 +1,11 @@
+SET(CMAKE_C_COMPILER clang)
+SET(CMAKE_CXX_COMPILER clang)
+
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -emit-llvm")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -emit-llvm")
+
+set(CMAKE_CXX_LINK_EXECUTABLE "llvm-link <OBJECTS> -o <TARGET>.bc <LINK_LIBRARIES>")
+
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/)
+
+add_executable(libprivate src1.cpp src2.cpp)
